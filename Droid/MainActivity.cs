@@ -3,8 +3,8 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Gms.Common;
 using Android.OS;
-using Firebase;
-using Firebase.Iid;
+//using Firebase;
+//using Firebase.Id;
 using System.Threading.Tasks;
 
 namespace Lexoh.Droid
