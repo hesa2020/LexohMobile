@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Lexoh"
+    x:Class="Lexoh.LexohPage" BackgroundColor="#ffffff">
+    <ContentPage.Content>
+        <StackLayout>
+            <local:HybridWebView IsVisible="False" x:Name="WebContent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Uri="about:blank" BackgroundColor="#2d3b53"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

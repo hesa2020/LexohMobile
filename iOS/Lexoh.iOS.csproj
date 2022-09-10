@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.props')" />
+  <Import Project="..\Lexoh\Lexoh.projitems" Label="Shared" Condition="Exists('..\Lexoh\Lexoh.projitems')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{37DC8BB0-23C7-45C3-B189-DA34BF7973C2}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Lexoh.iOS</RootNamespace>
+    <AssemblyName>Actif.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>31100</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+<AssemblyName>Lexoh.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <AssemblyName>Lexoh.iOS</AssemblyName>
+    <CodesignProvision>Lexoh IOS Prod</CodesignProvision>
+    <CodesignKey>iPhone Distribution: Sylvain Martens (8329RW92UW)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>11267</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    <AssemblyName>Lexoh.iOS</AssemblyName>
+    <CodesignProvision>Automatique</CodesignProvision>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.6.0.1\lib\xamarinios10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Plugin.Geolocator.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.4.1.2\lib\Xamarin.iOS10\Plugin.Geolocator.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.4.5.0.6\lib\xamarinios10\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.23.1\lib\Xamarin.iOS\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2515\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.1.7.3\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\LaunchImages.launchimage\Launch1024x768.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\LaunchImages.launchimage\Launch1536x2048.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\LaunchImages.launchimage\Launch2048x1536.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\LaunchImages.launchimage\Launch640x1136.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\LaunchImages.launchimage\Launch640x960.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\LaunchImages.launchimage\Launch768x1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-24%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-27.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-44%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-50%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-86%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-98%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-108%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-20%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-20%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-20x20%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Icon-83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\88.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\100-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\48.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\216.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\64.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\72.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\66.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\172.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\512-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\100.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\114.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\102.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\32-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\256-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\234.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\57.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\55.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\196.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\50.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\92.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\144.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87-1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Embedded\Cert.pfx" />
+    <BundleResource Include="GoogleService-Info.plist" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Embedded\ActifRoot.crt" />
+    <BundleResource Include="Settings.bundle\Root.plist" />
+    <None Include="websocket-sharp\websocket-sharp.snk" />
+    <None Include="websocket-sharp\doc\.gitignore" />
+    <None Include="websocket-sharp\doc\doc.sh" />
+    <None Include="websocket-sharp\.DS_Store" />
+    <BundleResource Include="Resources\CancelButton.png" />
+    <BundleResource Include="Resources\ClearButton.png" />
+    <BundleResource Include="Resources\AcceptButton.png" />
+    <BundleResource Include="Resources\logo_white.png" />
+    <BundleResource Include="websocket-sharp\logo_white.png" />
+    <EmbeddedResource Include="logo_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppleMapManager.cs" />
+    <Compile Include="Certificate.cs" />
+    <Compile Include="HybridWebViewRenderer.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="FormsNavigationDelegate.cs" />
+    <Compile Include="AppleFingerPrintManager.cs" />
+    <Compile Include="websocket-sharp\ByteOrder.cs" />
+    <Compile Include="websocket-sharp\CloseEventArgs.cs" />
+    <Compile Include="websocket-sharp\CloseStatusCode.cs" />
+    <Compile Include="websocket-sharp\CompressionMethod.cs" />
+    <Compile Include="websocket-sharp\ErrorEventArgs.cs" />
+    <Compile Include="websocket-sharp\Ext.cs" />
+    <Compile Include="websocket-sharp\Fin.cs" />
+    <Compile Include="websocket-sharp\HttpBase.cs" />
+    <Compile Include="websocket-sharp\HttpRequest.cs" />
+    <Compile Include="websocket-sharp\HttpResponse.cs" />
+    <Compile Include="websocket-sharp\LogData.cs" />
+    <Compile Include="websocket-sharp\LogLevel.cs" />
+    <Compile Include="websocket-sharp\Logger.cs" />
+    <Compile Include="websocket-sharp\Mask.cs" />
+    <Compile Include="websocket-sharp\MessageEventArgs.cs" />
+    <Compile Include="websocket-sharp\Opcode.cs" />
+    <Compile Include="websocket-sharp\PayloadData.cs" />
+    <Compile Include="websocket-sharp\Rsv.cs" />
+    <Compile Include="websocket-sharp\WebSocket.cs" />
+    <Compile Include="websocket-sharp\WebSocketException.cs" />
+    <Compile Include="websocket-sharp\WebSocketFrame.cs" />
+    <Compile Include="websocket-sharp\WebSocketState.cs" />
+    <Compile Include="websocket-sharp\Net\AuthenticationBase.cs" />
+    <Compile Include="websocket-sharp\Net\AuthenticationChallenge.cs" />
+    <Compile Include="websocket-sharp\Net\AuthenticationResponse.cs" />
+    <Compile Include="websocket-sharp\Net\AuthenticationSchemes.cs" />
+    <Compile Include="websocket-sharp\Net\Chunk.cs" />
+    <Compile Include="websocket-sharp\Net\ChunkStream.cs" />
+    <Compile Include="websocket-sharp\Net\ChunkedRequestStream.cs" />
+    <Compile Include="websocket-sharp\Net\ClientSslConfiguration.cs" />
+    <Compile Include="websocket-sharp\Net\Cookie.cs" />
+    <Compile Include="websocket-sharp\Net\CookieCollection.cs" />
+    <Compile Include="websocket-sharp\Net\CookieException.cs" />
+    <Compile Include="websocket-sharp\Net\EndPointListener.cs" />
+    <Compile Include="websocket-sharp\Net\EndPointManager.cs" />
+    <Compile Include="websocket-sharp\Net\HttpBasicIdentity.cs" />
+    <Compile Include="websocket-sharp\Net\HttpConnection.cs" />
+    <Compile Include="websocket-sharp\Net\HttpDigestIdentity.cs" />
+    <Compile Include="websocket-sharp\Net\HttpHeaderInfo.cs" />
+    <Compile Include="websocket-sharp\Net\HttpHeaderType.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListener.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListenerAsyncResult.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListenerContext.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListenerException.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListenerPrefix.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListenerPrefixCollection.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListenerRequest.cs" />
+    <Compile Include="websocket-sharp\Net\HttpListenerResponse.cs" />
+    <Compile Include="websocket-sharp\Net\HttpRequestHeader.cs" />
+    <Compile Include="websocket-sharp\Net\HttpResponseHeader.cs" />
+    <Compile Include="websocket-sharp\Net\HttpStatusCode.cs" />
+    <Compile Include="websocket-sharp\Net\HttpStreamAsyncResult.cs" />
+    <Compile Include="websocket-sharp\Net\HttpUtility.cs" />
+    <Compile Include="websocket-sharp\Net\HttpVersion.cs" />
+    <Compile Include="websocket-sharp\Net\InputChunkState.cs" />
+    <Compile Include="websocket-sharp\Net\InputState.cs" />
+    <Compile Include="websocket-sharp\Net\LineState.cs" />
+    <Compile Include="websocket-sharp\Net\NetworkCredential.cs" />
+    <Compile Include="websocket-sharp\Net\QueryStringCollection.cs" />
+    <Compile Include="websocket-sharp\Net\ReadBufferState.cs" />
+    <Compile Include="websocket-sharp\Net\RequestStream.cs" />
+    <Compile Include="websocket-sharp\Net\ResponseStream.cs" />
+    <Compile Include="websocket-sharp\Net\ServerSslConfiguration.cs" />
+    <Compile Include="websocket-sharp\Net\WebHeaderCollection.cs" />
+    <Compile Include="websocket-sharp\Net\WebSockets\HttpListenerWebSocketContext.cs" />
+    <Compile Include="websocket-sharp\Net\WebSockets\TcpListenerWebSocketContext.cs" />
+    <Compile Include="websocket-sharp\Net\WebSockets\WebSocketContext.cs" />
+    <Compile Include="websocket-sharp\Server\HttpRequestEventArgs.cs" />
+    <Compile Include="websocket-sharp\Server\HttpServer.cs" />
+    <Compile Include="websocket-sharp\Server\IWebSocketSession.cs" />
+    <Compile Include="websocket-sharp\Server\ServerState.cs" />
+    <Compile Include="websocket-sharp\Server\WebSocketBehavior.cs" />
+    <Compile Include="websocket-sharp\Server\WebSocketServer.cs" />
+    <Compile Include="websocket-sharp\Server\WebSocketServiceHost.cs" />
+    <Compile Include="websocket-sharp\Server\WebSocketServiceHost`1.cs" />
+    <Compile Include="websocket-sharp\Server\WebSocketServiceManager.cs" />
+    <Compile Include="websocket-sharp\Server\WebSocketSessionManager.cs" />
+    <Compile Include="ApplePlateformService.cs" />
+    <Compile Include="CustomPrintPageRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\ButtonCancel.imageset\" />
+    <Folder Include="Assets.xcassets\AppIcons.appiconset\" />
+    <Folder Include="Resources\Assets.xcassets\AppIcons.appiconset\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.iOS.2.88.2\build\xamarinios1.0\SkiaSharp.NativeAssets.iOS.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.iOS.2.88.2\build\xamarinios1.0\SkiaSharp.NativeAssets.iOS.targets')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.11.3\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Core.8.10.0.1\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Core.8.10.0.1\build\Xamarin.Firebase.iOS.Core.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Installations.8.10.0.1\build\Xamarin.Firebase.iOS.Installations.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Installations.8.10.0.1\build\Xamarin.Firebase.iOS.Installations.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Analytics.8.10.0.1\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Analytics.8.10.0.1\build\Xamarin.Firebase.iOS.Analytics.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.CloudMessaging.8.10.0.1\build\Xamarin.Firebase.iOS.CloudMessaging.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.CloudMessaging.8.10.0.1\build\Xamarin.Firebase.iOS.CloudMessaging.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets')" />
+</Project>
