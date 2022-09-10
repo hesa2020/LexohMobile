@@ -1,9 +1,15 @@
 ﻿<Properties StartupConfiguration="{E8484693-2EE6-4C40-A383-9BEF691A10F4}|Default">
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Lexoh.Droid PreferredExecutionTarget="Android.pixel_5_-_api_31" />
+  <DisabledProjects>
+    <String>iOS/Lexoh.iOS.csproj</String>
+    <String>UITests/Lexoh.UITests.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Lexoh.Droid.csproj">
     <Files>
-      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="2160" Column="35" />
-      <File FileName="Droid/Lexoh.Droid.csproj" Line="141" Column="49" />
+      <File FileName="Droid/Lexoh.Droid.csproj" Line="37" Column="56" />
+      <File FileName="Droid/MainActivity.cs" Line="31" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,15 +24,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Lexoh.Droid PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <DisabledProjects>
-    <String>iOS/Lexoh.iOS.csproj</String>
-    <String>UITests/Lexoh.UITests.csproj</String>
-  </DisabledProjects>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.0.0.0" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_31" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
