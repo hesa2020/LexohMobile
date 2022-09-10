@@ -1,11 +1,9 @@
 ﻿<Properties StartupConfiguration="{E8484693-2EE6-4C40-A383-9BEF691A10F4}|Default">
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Lexoh/LexohPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Lexoh.Droid.csproj">
     <Files>
-      <File FileName="iOS/Helpers/Settings.cs" Line="1" Column="1" />
-      <File FileName="packages/Xamarin.Forms.2.5.0.280555/lib/win81/Xamarin.Forms.Core.xml" Line="5147" Column="39" />
       <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="2160" Column="35" />
-      <File FileName="Lexoh/LexohPage.xaml.cs" Line="14" Column="1" />
+      <File FileName="Droid/Lexoh.Droid.csproj" Line="141" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,11 +15,6 @@
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="LexohMobile" expanded="True" selected="True" />
-        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
