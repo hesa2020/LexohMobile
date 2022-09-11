@@ -1,6 +1,10 @@
 ﻿using Xamarin.Forms;
 using System;
 using System.Reflection;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Device = Xamarin.Forms.Device;
 
 namespace Lexoh
 {
@@ -49,6 +53,12 @@ namespace Lexoh
         protected override void OnStart()
         {
             // Handle when your app starts
+            //"b1bcef9f-5d84-40c4-a202-e9943d88f77a"
+            AppCenter.Start("ios=b1bcef9f-5d84-40c4-a202-e9943d88f77a;" +
+                  "uwp={Your UWP App secret here};" +
+                  "android={Your Android App secret here};" +
+                  "macos={Your macOS App secret here};",
+                  typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
